@@ -104,11 +104,13 @@ const userController = {
                     });
                     
                      
+                }else{
+                    return res.status(400).json({
+                        message: "Bad Request!",
+                        error: "Password doesn't match!"
+                    });
                 }
-                return res.status(400).json({
-                    message: "Bad Request!",
-                    error: "Password doesn't match!"
-                });
+                
 
     
             });
